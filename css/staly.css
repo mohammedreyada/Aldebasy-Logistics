@@ -1,0 +1,260 @@
+/* ==================== Fonts ==================== */
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+
+/* ==================== Global Font Override ==================== */
+/* تغيير الخط في كل الموقع بالكامل */
+* {
+  font-family: 'Amiri', serif !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* ==================== Navbar ==================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0px 0px;     /* ↓ تقليل ارتفاع النافبار */
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+/* تقليل حجم اللوجو */
+.logo {
+  width: 65px;          /* ↓ بدل 100px */
+  border-radius: 50%;
+}
+
+/* تقليل مسافات الروابط وحجمها */
+.navbar .nav-link {
+  color: #fff !important;
+  position: relative;
+  font-weight: 400;
+  font-size: 12px;       /* ↓ كان 14px */
+  margin-left: 8px;      /* ↓ بدل 15px */
+  padding: 5px 5px;      /* ↓ تقليل الارتفاع */
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #f8f9fa !important;
+}
+
+.navbar .nav-link.active::after,
+.navbar .nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 100%;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+/* ==================== Home ==================== */
+.home {
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+    url("./imag/1561469873_345_113464_customs2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+.home h1 {
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.7);
+  animation: fadeInDown 1.2s ease;
+}
+
+.home p {
+  font-size: 1.3rem;
+  color: #f1f1f1;
+  margin-top: 1rem;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+  animation: fadeInUp 1.4s ease;
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==================== About ==================== */
+#about h2 {
+  font-size: 32px;
+  text-transform: uppercase;
+  position: relative;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+#about h2::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background: var(--main-color, rgb(61, 101, 161));
+  display: block;
+  margin: 8px auto 0;
+}
+
+/* ==================== Services ==================== */
+#services {
+  background-color: rgb(61, 101, 161);
+  padding: 60px 0;
+}
+
+#services h2 {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+#services .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff;
+}
+
+#services .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#services a {
+  text-decoration: none;
+}
+
+#services .card a {
+  color: #000;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+#services .card:hover a {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+#services .card p {
+  color: #555;
+  transition: color 0.3s ease;
+}
+
+#services .card:hover p {
+  color: #000;
+}
+/* ==================== Websites ==================== */
+#Websites {
+  background-color: rgb(61, 101, 161);
+}
+
+#Websites h2 {
+  color: #fff;
+}
+
+#Websites img {
+  height: 150px;
+  object-fit: contain;
+}
+
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ==================== Contact ==================== */
+#contact {
+  background-color: rgb(61, 101, 161);
+  padding: 60px 0;
+  color: #fff;
+}
+
+/* ==================== Footer ==================== */
+#Links {
+  background-color: rgb(61, 101, 161);
+  padding: 30px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+footer a:hover {
+  color: #0d6efd !important;
+}
+
+footer img.logo {
+  transition: transform 0.3s ease;
+}
+
+footer img.logo:hover {
+  transform: scale(1.1);
+}
+
+/* ==================== Responsive ==================== */
+@media (max-width: 992px) {
+  .navbar .nav-link {
+    margin-left: 0;
+    display: block;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home {
+    height: 70vh;
+    padding: 0 20px;
+  }
+
+  #services .card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .logo {
+    width: 70px;
+  }
+
+  #about h2 {
+    font-size: 26px;
+  }
+}
